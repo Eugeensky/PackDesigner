@@ -27,9 +27,13 @@ namespace PackDesigner.BL
 
                 return doc;
             }
-            catch(Exception ex)
+            catch (FileNotFoundException)
             {
-                throw new Exception($"XML deserialize error - {ex.Message}");
+                throw new Exception($"file {path} not found");
+            }
+            catch(NullReferenceException)
+            {
+                throw new Exception("key field or attribute does not exist");
             }
         }
 
@@ -37,8 +41,8 @@ namespace PackDesigner.BL
         {
             Panel panel = new Panel
             {
-                PanelId = xPanel.Attribute("panelId")?.Value,
-                PanelName = xPanel.Attribute("panelName")?.Value,
+                PanelId = xPanel?.Attribute("panelId")?.Value,
+                PanelName = xPanel?.Attribute("panelName")?.Value,
                 HingeOffset = float.Parse(xPanel.Attribute("hingeOffset").Value),
                 PanelWidth = float.Parse(xPanel.Attribute("panelWidth").Value),
                 PanelHeight = float.Parse(xPanel.Attribute("panelHeight").Value),
