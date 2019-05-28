@@ -20,7 +20,7 @@ namespace PackDesigner.BL
             rectangles.Add(new RectangleF(x, y, panel.PanelWidth, panel.PanelHeight));
             foreach (Panel attachedPanel in panel.AttachedPanels)
             {
-                AddRectangle(rectangles, x, y, Rotations.Top, panel.PanelWidth, panel.PanelHeight, attachedPanel);
+                AddRectangle(rectangles, x, y, Rotations.Up, panel.PanelWidth, panel.PanelHeight, attachedPanel);
             }
             return rectangles;
         }
@@ -43,7 +43,7 @@ namespace PackDesigner.BL
 
             switch (currentRotation)
             {
-                case Rotations.Top:
+                case Rotations.Up:
                     x = parentX + ((parentWidth / 2) - (current.PanelWidth / 2) + current.HingeOffset);
                     y = parentY - current.PanelHeight;
                     width = current.PanelWidth;
@@ -55,7 +55,7 @@ namespace PackDesigner.BL
                     width = current.PanelHeight;
                     height = current.PanelWidth;
                     break;
-                case Rotations.Bottom:
+                case Rotations.Down:
                     x = parentX + ((parentWidth / 2) - (current.PanelWidth / 2) - current.HingeOffset);
                     y = parentY + parentHeight;
                     width = current.PanelWidth;

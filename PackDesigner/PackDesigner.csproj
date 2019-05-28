@@ -49,13 +49,7 @@
   <ItemGroup>
     <Compile Include="BL\RectangleService.cs" />
     <Compile Include="BL\XMLParser.cs" />
-    <Compile Include="Models\Animations\Animation.cs" />
-    <Compile Include="Models\Animations\CameraAnimation.cs" />
-    <Compile Include="Models\Animations\CameraTargetAnimation.cs" />
-    <Compile Include="Models\Animations\PanelAnimation.cs" />
     <Compile Include="Models\Document.cs" />
-    <Compile Include="Models\Light.cs" />
-    <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Panel.cs" />
     <Compile Include="Models\Rotations.cs" />
     <Compile Include="Program.cs" />

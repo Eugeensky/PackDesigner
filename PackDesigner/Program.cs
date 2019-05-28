@@ -25,7 +25,7 @@ namespace PackDesigner
             {
                 Document doc = new XMLParser().Deserialize(xmlPath);
 
-                using (Bitmap bitmap = new Bitmap(doc.OriginalDocumentWidth, doc.OriginalDocumentHeight))
+                using (Bitmap bitmap = new Bitmap((int)doc.OriginalDocumentWidth, (int)doc.OriginalDocumentHeight))
                 {
                     using (Graphics graphics = Graphics.FromImage(bitmap))
                     {

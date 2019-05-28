@@ -2,9 +2,9 @@
 {
     public enum Rotations
     {
-        Bottom = 0,
+        Down = 0,
         Right = 1,
-        Top = 2,
+        Up = 2,
         Left = 3        
     }
 }
