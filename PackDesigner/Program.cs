@@ -34,7 +34,7 @@ namespace PackDesigner
                         var rectangles = rectangleService.GetRectangles(doc.RootX, doc.RootY, doc.Panel);
                         graphics.DrawRectangles(pen, rectangles.ToArray());
                     }
-                    string imgPath = $"..\\..\\Files\\image{(int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds}.png";
+                    string imgPath = $"..\\..\\Files\\Images\\{(int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds}.png";
                     bitmap.Save(imgPath);
                     Process.Start(imgPath);
                 }
